@@ -1,6 +1,7 @@
 SHA256 encrypt = SHA256.Create();
 string VARIABEL_HASIL_ENKRIPSI = GetHash(encrypt, STRING_YANG_AKAN_DI_ENKRIPSI);
 
+// BUAT FUNCTION
 private static string GetHash(HashAlgorithm hashAlgorithm, string input)
 {
 
