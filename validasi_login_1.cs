@@ -1,5 +1,5 @@
 // MEMBUAT STRING YANG ISINYA PERINTAH QUERY UNTUK MENGHITUNG DATA YANG SAMA DENGAN DAT ALOGIN
-string query = "SELECT COUNT(*) FROM employee WHERE Username=@username AND Password=@password;";
+string query = "SELECT COUNT(*) FROM namaTabel WHERE Username=@username AND Password=@password;";
 
 // MEMBUAT PERINTAH SQL
 SqlCommand cek = new SqlCommand(query, KONEKSI_DATABASE);
@@ -8,7 +8,7 @@ SqlCommand cek = new SqlCommand(query, KONEKSI_DATABASE);
 cek.Parameters.AddWithValue("@username", txtUsername.Text);
 
 // MEMBUAT PARAMETER @password UNTUK QUERY DIATAS DAN MENGISI PARAMETER TSB DENGAN txtPassword.Text
-cek.Parameters.AddWithValue("@password", encryptedPass);
+cek.Parameters.AddWithValue("@password", txtPassword.Text);
 
 // MEMBUKA KONEKSI DATABASE
 KONEKSI_DATABASE.Open();
