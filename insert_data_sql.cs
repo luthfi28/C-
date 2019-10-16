@@ -14,4 +14,4 @@ cmd.ExecuteNonQuery();
 KONEKSI_DATABASE.Close();
 
 // MENAMPILKAN PESAN "data telah ditambahkan."
-MsgBox.Show("SUKSES", "data telah ditambahkan.");
+MessageBox.Show("data telah ditambahkan.");
